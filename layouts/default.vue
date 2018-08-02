@@ -30,6 +30,7 @@
   top: 0;
   bottom: 0;
   right: 0;
+  width: 100%;
 }
 .content-wrapper {
   width: 1160px;
