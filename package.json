@@ -1,0 +1,28 @@
+{
+  "name": "net-notice",
+  "version": "1.0.0",
+  "description": "\"a public notice of Vite\"",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitelabs/net-notice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitelabs/net-notice/issues"
+  },
+  "homepage": "https://github.com/vitelabs/net-notice#readme",
+  "dependencies": {
+    "nuxt": "^1.4.2",
+    "nuxt-i18n": "^4.1.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.1.0"
+  }
+}
