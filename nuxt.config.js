@@ -12,7 +12,15 @@ module.exports = {
     ]
   },
   loading: {color: "#7FB2FE"},
+  plugins: [{ src: "~/plugins/element-ui.js", ssr: true }],
   build: {
+    vendor: ["~/plugins/element-ui.js"],
+    babel: {
+      "plugins": [["component", {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }]]
+    }
   },
   router: {
     middleware: "i18n"

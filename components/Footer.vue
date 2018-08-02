@@ -20,12 +20,12 @@
         <a class="img-wrapper" href="https://www.reddit.com/r/vitelabs" target="_blank">
           <img src="~assets/images/reddit.svg"/>
         </a>
-        <!-- <el-popover
+        <el-popover
           placement="top"
           trigger="click">
           <img src="~assets/images/wxCode.png" width="150" height="150"/>
           <img slot="reference" src="~assets/images/wecht.svg"/>
-        </el-popover> -->
+        </el-popover>
       </div>
     </div>
   </footer>

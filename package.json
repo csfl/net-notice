@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/vitelabs/net-notice#readme",
   "dependencies": {
+    "element-ui": "^2.4.5",
     "nuxt": "^1.4.2",
     "nuxt-i18n": "^4.1.0"
   },
   "devDependencies": {
+    "babel-plugin-component": "^1.1.1",
     "node-sass": "^4.9.2",
     "sass-loader": "^7.1.0"
   }
