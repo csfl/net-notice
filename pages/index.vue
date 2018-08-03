@@ -60,6 +60,7 @@ a {
   .lang-select {
     float: right;
     margin-right: 26px; 
+    margin-top: 13px; 
     &:hover {
       cursor: pointer;
     }
