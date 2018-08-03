@@ -1,27 +1,28 @@
 <template>
   <div class="page-home">
     <img src="~assets/images/logo.svg" class="logo"/>
+    <lang-select class="lang-select"></lang-select>
     <div class="page-content">
       <div class="left">
-        <div class="title">预览版公告</div>
+        <div class="title">{{ $t('main.title') }}</div>
         <div class="context">
-          <div class="preview">Vite的主网和第一期测试网络正在建设当中，目前为预览版本。</div>
-          <div>· 你可以通过预览版区块链浏览器查询快照块、交易和账户等基本信息。</div>
-          <div>· 你还可以下载预览版钱包生成个人账户，申请演示版代币，操作转账，并在区块链浏览器查询您的交易。</div>
+          <div class="preview">{{ $t('main.ctx2') }}</div>
+          <div>· {{ $t('main.ctx3') }}</div>
+          <div>· {{ $t('main.ctx4') }}</div>
         </div>
         <div class="download-wallet">
-          <span>下载预览版钱包</span>
+          <span>{{ $t('main.ctx5') }}</span>
           <div class="version">
-            <a target="_blank"><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">Mac 版</span></div></a>
-            <a target="_blank"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">Windows 版</span></div></a>
+            <a target="_blank"><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
+            <a target="_blank"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
           </div>
         </div>
         <div class="explorer">
-          <a href="https://test.vite.net" target="_blank" class="extral">查看区块链浏览器<img src="~assets/images/newpage.svg" class="new-page"/></a>
+          <a href="https://test.vite.net" target="_blank" class="extral">{{ $t('main.ctx8') }}<img src="~assets/images/newpage.svg" class="new-page"/></a>
         </div>
-        <div>
+        <div class="explorer">
           <a href="https://github.com/vitelabs" target="_blank" class="extral">
-          以上系统代码已在 Github 开源，欢迎阅览 <img src="~assets/images/newpage.svg" class="new-page"/>
+          {{ $t('main.ctx9') }} Github {{ $t('main.ctx10') }} <img src="~assets/images/newpage.svg" class="new-page"/>
           </a>
         </div>
       </div>
@@ -34,15 +35,15 @@
 </template>
 
 <script>
-
-  export default {
-    components: {
-    },
-    data() {
-      return {
-      };
-    }
-  };
+import LangSelect from "~/components/LangSelect.vue";
+export default {
+  components: {
+    LangSelect
+  },
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
@@ -54,13 +55,20 @@ a {
   margin-left: 30px;
 }
 .page-home {
-  font-family: PingFangSC-Semibold;
-  
+  font-family: Arial, PingFangSC-Semibold;
+  .lang-select {
+    float: right;
+    margin-right: 26px;
+    margin-top: 13px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .logo {
-    margin-top: 28px; 
+    margin-top: 28px;
   }
   .page-content {
-    margin-top: 136px; 
+    margin-top: 136px;
     display: flex;
     display: -webkit-flex;
     color: #272727;
@@ -68,7 +76,7 @@ a {
     letter-spacing: 0;
     line-height: 18px;
     .extral {
-      color: #053CCE;
+      color: #053cce;
     }
     .left {
       .title {
@@ -77,42 +85,50 @@ a {
         line-height: 46px;
       }
       .context {
-        margin-top: 33px; 
-        line-height: 38px;
+        margin-top: 33px;
+        line-height: 20px;
         font-family: PingFangSC-Regular;
-        color: #5E6875;
+        color: #5e6875;
         font-size: 16px;
         .preview {
-          font-family: PingFangSC-Semibold;
-          line-height: 38px;
+          font-family: Arial, PingFangSC-Semibold;
+          padding-bottom: 10px;
         }
       }
       .download-wallet {
         margin-top: 30px;
+        margin-bottom: 30px;
       }
       .version {
         display: flex;
         display: -webkit-flex;
-        margin-top: 24px; 
+        margin-top: 24px;
         .wallet-version {
           display: inline-block;
           width: 180px;
           height: 50px;
-          background-image: linear-gradient(-153deg, #1B3BD8 0%, #176CE0 31%, #0B92E7 49%, #0BB6EB 71%, #00E0F2 100%);
-          box-shadow: 0 0 20px 0 rgba(29,17,86,0.12);
+          background-image: linear-gradient(
+            -153deg,
+            #1b3bd8 0%,
+            #176ce0 31%,
+            #0b92e7 49%,
+            #0bb6eb 71%,
+            #00e0f2 100%
+          );
+          box-shadow: 0 0 20px 0 rgba(29, 17, 86, 0.12);
           border-radius: 100px;
           font-size: 18px;
-          color: #FFFFFF;
+          color: #ffffff;
           text-align: center;
           letter-spacing: 0;
           line-height: 50px;
         }
       }
       .explorer {
-        margin-top: 40px;
-        margin-bottom: 24px; 
+        margin-bottom: 20px;
+        max-width: 400px;
       }
-      
+
       .new-page {
         margin-left: 10px;
       }

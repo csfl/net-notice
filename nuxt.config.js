@@ -2,7 +2,7 @@ const i18nConfig = require("./i18n/config.js");
 
 module.exports = {
   head: {
-    title: "a public notice of Vite",
+    title: "Notice of Vite",
     meta: [
       {charset: "utf-8"},
       {name: "viewport", content: "width=device-width, initial-scale=1, user-scalable=no"},
