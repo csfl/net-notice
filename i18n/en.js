@@ -2,7 +2,6 @@ module.exports = {
   lang: "English",
   main :{
     title: "Announcement of Preview Version",
-    ctx1: "Dear friends and community volunteers of Vite:",
     ctx2: "The main network and testing network version 1.0 of Vite are under constructed right now, currently it is preview version.",
     ctx3: "You can search snapshot blocks, transactions and account details through preview version of Vite blockchain explorer.",
     ctx4: "Meanwhile, you can download the preview version of Vite wallet to generate individual account, apply testing tokens, make transactions and search transaction details via Vite blockchain explorer.",
