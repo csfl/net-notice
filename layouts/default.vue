@@ -31,9 +31,12 @@
   bottom: 0;
   right: 0;
   width: 100%;
+  height: 100%;
+  background: url("~assets/images/background.svg") 100% 0%;
 }
 .content-wrapper {
-  width: 1160px;
+  width: 1440px;
   margin: auto;
+  height: 100%;
 }
 </style>
