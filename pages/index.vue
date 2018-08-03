@@ -1,6 +1,7 @@
 <template>
   <div class="page-home">
     <img src="~assets/images/logo.svg" class="logo"/>
+    <lang-select class="lang-select"></lang-select>
     <div class="page-content">
       <div class="left">
         <div class="title">预览版公告</div>
@@ -34,9 +35,10 @@
 </template>
 
 <script>
-
+  import LangSelect from "~/components/LangSelect.vue";
   export default {
     components: {
+      LangSelect
     },
     data() {
       return {
@@ -55,7 +57,13 @@ a {
 }
 .page-home {
   font-family: PingFangSC-Semibold;
-  
+  .lang-select {
+    float: right;
+    margin-right: 26px; 
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .logo {
     margin-top: 28px; 
   }
