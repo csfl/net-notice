@@ -49,12 +49,12 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    background: #fff;
+    background: #0033B9;;
     text-align: center;
     font-size: 14px;
-    color: #3F3F3F;
+    color: #fff;
     .footer-content {
-      width: 1160px;
+      width: 1440px;
       margin: auto;
       height: 76px;
       line-height: 76px;
@@ -64,13 +64,13 @@
       .brand {
         opacity: 0.78;
         font-size: 14px;
-        color: #8D9BAE;
+        color: #fff;
         letter-spacing: 0;
       }
     }
     a {
       text-decoration: none;
-      color: #3F3F3F;
+      color: #fff;
     }
     img {
       margin-left: 18px;
