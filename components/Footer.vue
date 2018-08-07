@@ -54,7 +54,8 @@
     font-size: 14px;
     color: #fff;
     .footer-content {
-      width: 1440px;
+      padding: 0 20px;
+      box-sizing: border-box;
       margin: auto;
       height: 76px;
       line-height: 76px;

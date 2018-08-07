@@ -35,7 +35,8 @@
   background: url("~assets/images/background.svg") 100% 0%;
 }
 .content-wrapper {
-  width: 1440px;
+  box-sizing: border-box;
+  padding: 0 20px;
   margin: auto;
   height: 100%;
 }
