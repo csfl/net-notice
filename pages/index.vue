@@ -13,8 +13,8 @@
         <div class="download-wallet">
           <span>{{ $t('main.ctx5') }}</span>
           <div class="version">
-            <a target="_blank"><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
-            <a target="_blank"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
+            <a href="/download/wallet/mac/vite-wallet-0.0.1.dmg" ><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
+            <a href="/download/wallet/win/vite-wallet Setup 0.0.1.exe"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
           </div>
         </div>
         <div class="explorer">
