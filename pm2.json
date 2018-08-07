@@ -1,0 +1,16 @@
+{
+  "apps" : [{
+    "name"        : "net-notice",
+    "instances"   : 2,
+    "script"      : "./node_modules/nuxt/bin/nuxt-start",
+    "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+    "watch"       : true,
+    "node_args"   : "--harmony",
+    "cwd"         : "/var/www/net-notice",
+    "env": {
+      "NODE_ENV": "production",
+      "HOST": "0.0.0.0",
+      "PORT": "8080"
+    }
+  }]
+}
