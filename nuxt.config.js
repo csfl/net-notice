@@ -26,6 +26,7 @@ module.exports = {
     middleware: "i18n"
   },
   css: [
+    '~assets/css/main.scss'
   ],
   modules: [
     ["nuxt-i18n", i18nConfig],

@@ -46,8 +46,6 @@
 
 <style rel="stylesheet/scss" lang="scss" scoped>
   .footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background: #0033B9;;
     text-align: center;

@@ -25,7 +25,6 @@
 
 <style rel="stylesheet/scss" lang="scss" scoped>
 .default-container {
-  position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
@@ -39,6 +38,5 @@
   padding: 0 53px;
   margin: auto;
   height: 100%;
-  overflow-y: scroll;
 }
 </style>
