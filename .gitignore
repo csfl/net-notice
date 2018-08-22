@@ -6,7 +6,6 @@ dist
 build/
 assets/.DS_Store
 .DS_Store
-static/
 
 # Logs
 logs

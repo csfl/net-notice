@@ -8,7 +8,7 @@ module.exports = {
       {name: "viewport", content: "width=device-width, initial-scale=1, user-scalable=no"},
     ],
     link: [
-      {rel: "icon", type: "image/x-icon", href: "/favicon.ico"}
+      {rel: "icon", type: "image/x-icon", href: "/logo/icon.png"}
     ]
   },
   loading: {color: "#7FB2FE"},
