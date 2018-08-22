@@ -8,7 +8,7 @@ module.exports = {
       {name: "viewport", content: "width=device-width, initial-scale=1, user-scalable=no"},
     ],
     link: [
-      {rel: "icon", type: "image/x-icon", href: "https://vite.net/logo/icon.png"}
+      {rel: "icon", type: "image/x-icon", href: "/icon.png"}
     ]
   },
   loading: {color: "#7FB2FE"},
@@ -29,6 +29,10 @@ module.exports = {
     '~assets/css/main.scss'
   ],
   modules: [
+    ["@nuxtjs/google-analytics"],
     ["nuxt-i18n", i18nConfig],
-  ]
+  ],
+  "google-analytics": {
+    id: "UA-124434981-1"
+  },
 };

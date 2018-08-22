@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/vitelabs/net-notice#readme",
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.0.2",
     "element-ui": "^2.4.5",
     "nuxt": "^1.4.2",
     "nuxt-i18n": "^4.1.0"
