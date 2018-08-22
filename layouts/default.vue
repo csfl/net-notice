@@ -36,8 +36,9 @@
 }
 .content-wrapper {
   box-sizing: border-box;
-  padding: 0 20px;
+  padding: 0 53px;
   margin: auto;
   height: 100%;
+  overflow-y: scroll;
 }
 </style>

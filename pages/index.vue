@@ -3,7 +3,7 @@
     <img src="~assets/images/logo.svg" class="logo"/>
     <lang-select class="lang-select"></lang-select>
     <div class="page-content">
-      <div class="left">
+      <div class="left page-bottom">
         <div class="title">{{ $t('main.title') }}</div>
         <div class="context">
           <div class="preview">{{ $t('main.ctx2') }}</div>
@@ -26,7 +26,7 @@
           </a>
         </div>
       </div>
-      <div class="right">
+      <div class="right page-bottom">
         <img src="~assets/images/computer.svg"/>
       </div>
     </div>
@@ -68,7 +68,7 @@ a {
     margin-top: 28px;
   }
   .page-content {
-    margin-top: 136px;
+    margin-top: 5%;
     display: flex;
     display: -webkit-flex;
     color: #272727;
@@ -77,6 +77,9 @@ a {
     line-height: 18px;
     .extral {
       color: #053cce;
+    }
+    .page-bottom {
+      margin-bottom: 76px;
     }
     .left {
       .title {
