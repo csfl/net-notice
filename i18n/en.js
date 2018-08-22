@@ -1,7 +1,7 @@
 module.exports = {
   lang: "EN",
   head: {
-    title: "Vite-A Next Generation High-performance Public Blockchain",
+    title: "Vite-Next Generation High-performance Public Blockchain",
   },
   main :{
     title: "Announcement of Preview Version",
