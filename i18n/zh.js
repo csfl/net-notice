@@ -1,7 +1,7 @@
 module.exports = {
   lang: "CH",
   head: {
-    title: "Vite-新一代高性能去中心化应用平台",
+    title: "Vite-新一代高性能公链",
   },
   main :{
     title: "预览版公告",

@@ -38,5 +38,6 @@
   padding: 0 53px;
   margin: auto;
   height: 100%;
+  min-height: calc(100vh - 76px);
 }
 </style>
