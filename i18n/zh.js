@@ -1,5 +1,8 @@
 module.exports = {
   lang: "CH",
+  head: {
+    title: "Vite-新一代高性能去中心化应用平台",
+  },
   main :{
     title: "预览版公告",
     ctx2: "Vite的主网和第一期测试网络正在建设当中，目前为预览版本。",

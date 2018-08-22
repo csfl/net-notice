@@ -16,7 +16,7 @@
     },
     head () {
       return {
-        title: "index"
+        title: this.$t('head.title')
       };
     }
   }

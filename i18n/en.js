@@ -1,5 +1,8 @@
 module.exports = {
   lang: "EN",
+  head: {
+    title: "Vite-A Next Generation High-performance Decentralized Application Platform",
+  },
   main :{
     title: "Announcement of Preview Version",
     ctx2: "The main network and testing network version 1.0 of Vite are under constructed right now, currently it is preview version.",
