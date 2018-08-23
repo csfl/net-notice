@@ -24,20 +24,26 @@
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-.default-container {
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: url("~assets/images/background.svg") 100% 0%;
-}
-.content-wrapper {
-  box-sizing: border-box;
-  padding: 0 53px;
-  margin: auto;
-  height: 100%;
-  min-height: calc(100vh - 76px);
-}
+  @import "~assets/css/vars";
+
+  .default-container {
+    width: 100%;
+    height: 100%;
+    background: url("~assets/images/background.svg") 100% 0%;
+    background-size: cover;
+  }
+  .content-wrapper {
+    box-sizing: border-box;
+    padding: 0 53px;
+    margin: auto;
+    height: 100%;
+    min-height: calc(100vh - 76px);
+  }
+
+  @media (max-width: $MQMobile) {
+    .content-wrapper {
+      padding: 0 1.5rem;
+    }
+  }
+
 </style>
