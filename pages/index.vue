@@ -27,7 +27,7 @@
           </div>
         </div>
         <div class="explorer">
-          <a href="https://test.vite.net" target="_blank" class="extral">{{ $t('main.ctx8') }}<img src="~assets/images/newpage.svg" class="new-page"/></a>
+          <a href="https://testnet.vite.net" target="_blank" class="extral">{{ $t('main.ctx8') }}<img src="~assets/images/newpage.svg" class="new-page"/></a>
         </div>
         <div class="explorer">
           <a href="https://github.com/vitelabs" target="_blank" class="extral">
