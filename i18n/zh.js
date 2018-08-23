@@ -12,7 +12,7 @@ module.exports = {
     ctx6: "Mac 版",
     ctx7: "Windows 版",
     ctx8: "查看区块链浏览器",
-    ctx9: "反馈问题",
+    ctx9: "反馈问题 info@vite.org",
   },
   footer: {
     official: "官网"

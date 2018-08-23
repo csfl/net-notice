@@ -12,7 +12,7 @@ module.exports = {
     ctx6: "Mac OS",
     ctx7: "Windows",
     ctx8: "View demo version of Block Explorer",
-    ctx9: "Problem feedback",
+    ctx9: "Feedback info@vite.org",
   },
   footer: {
     official: "Official Website"
