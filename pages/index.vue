@@ -22,16 +22,16 @@
         <div class="download-wallet">
           <span>{{ $t('main.ctx5') }}</span>
           <div class="version">
-            <a href="/download/wallet/mac/vite-wallet-0.0.1.dmg" ><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
-            <a href="/download/wallet/win/vite-wallet Setup 0.0.1.exe"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
+            <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet-0.0.1.dmg" ><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
+            <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet%20Setup%200.0.1.exe"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
           </div>
         </div>
         <div class="explorer">
           <a href="https://testnet.vite.net" target="_blank" class="extral">{{ $t('main.ctx8') }}<img src="~assets/images/newpage.svg" class="new-page"/></a>
         </div>
         <div class="explorer">
-          <a href="https://github.com/vitelabs" target="_blank" class="extral">
-          {{ $t('main.ctx9') }} Github {{ $t('main.ctx10') }} <img src="~assets/images/newpage.svg" class="new-page"/>
+          <a href="mailto:info@vite.org" target="_blank" class="extral">
+          {{ $t('main.ctx9') }} <img src="~assets/images/newpage.svg" class="new-page"/>
           </a>
         </div>
       </div>

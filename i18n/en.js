@@ -12,8 +12,7 @@ module.exports = {
     ctx6: "Mac OS",
     ctx7: "Windows",
     ctx8: "View demo version of Block Explorer",
-    ctx9: "Our code is on",
-    ctx10: ".  We welcome your feedback! :)",
+    ctx9: "Problem feedback",
   },
   footer: {
     official: "Official Website"
