@@ -22,8 +22,8 @@
         <div class="download-wallet">
           <span>{{ $t('main.ctx5') }}</span>
           <div class="version">
-            <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet-0.0.1.dmg" ><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
-            <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet%20Setup%200.0.1.exe"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
+            <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet-0.0.2.dmg" ><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
+            <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet%20Setup%200.0.2.exe"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
           </div>
         </div>
         <div class="explorer">
