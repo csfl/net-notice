@@ -9,10 +9,13 @@ module.exports = {
     ],
     link: [
       {rel: "icon", type: "image/x-icon", href: "/icon.png"}
+    ],
+    script: [
+      {src: "https://hm.baidu.com/hm.js?adc53b8240fe5c62d3432d6efb0c1e2f"},
     ]
   },
   loading: {color: "#7FB2FE"},
-  plugins: [{ src: "~/plugins/element-ui.js", ssr: true }],
+  plugins: [{ src: "~/plugins/element-ui.js", ssr: true }, "~plugins/ga.js"],
   build: {
     vendor: ["~/plugins/element-ui.js"],
     babel: {
@@ -23,7 +26,8 @@ module.exports = {
     }
   },
   router: {
-    middleware: "i18n"
+    middleware: "i18n",
+    fallback: true
   },
   css: [
     '~assets/css/main.scss'
