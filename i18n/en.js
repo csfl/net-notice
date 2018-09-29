@@ -1,20 +1,32 @@
 module.exports = {
-  lang: "EN",
-  head: {
-    title: "Vite-Next Generation High-performance Public Blockchain",
-  },
-  main :{
-    title: "Public Release of Block Explorer and Wallet (Preview Version)",
-    ctx2: "Note: The Vite Mainnet and Testnet 1.0 are under construction at this time.  The current version is preview version.",
-    ctx3: "You may search snapshot blocks, transactions and account details through the preview version of the Vite block explorer.",
-    ctx4: "You may download the preview version of the Vite wallet to create new accounts, apply for test tokens, make transactions and search for transaction details via Vite block explorer.",
-    ctx5: "Download preview version of Vite wallet",
-    ctx6: "Mac OS",
-    ctx7: "Windows",
-    ctx8: "View preview version explorer",
-    ctx9: "Feedback info@vite.org",
-  },
-  footer: {
-    official: "Official Website"
-  }
+    lang: "EN",
+    head: {
+        title: "Vite-Next Generation High-performance Public Blockchain",
+    },
+    main:
+    {
+        notice: {
+            title1: "New Products Release Announcement",
+            title2: "The preview version of Vite App iOS version, Vite Block Explorer, Vite Web Wallet, Vite Store and Vite Pay are released now.",
+            ctx:["The current version of Vite App mainly implements wallet module, supports accounts creation and import through mnemonic words, supports transfer and collection through QR code, supports transaction records check and wallet management, supports new addresses generation and mnemonic words export ","Vite Block Explorer provides statistics information, transactions filter and sort, and diagram of accounts who hold the same kind of token","Vite Web Wallet supports generating accounts, sending and receiving transactions, acquiring test tokens, checking information of tokens issued by the system","Vite Pay supports payment and collection functions of Vite Store","Vite Store supports purchasing Vite peripheral products and prepaying mobile phone fee by VCP(Vite Community Point)"]
+        },
+        downloadWallet: {
+            title: "Download Vite wallet",
+            ctx1: "Mac OS",
+            ctx2: "Windows"
+        },
+        downloadApp: {
+            title: "Scan the QR code below to download Vite App",
+            ctx1: "Vite App"
+        },
+        links: {
+            ctx1: "View explorer",
+            ctx2: "Access Vite Store",
+            ctx3: "Access Web Wallet",
+            ctx4: "Feedback info@vite.org",
+        }
+    },
+    footer: {
+        official: "Official Website"
+    }
 };

@@ -1,46 +1,63 @@
 <template>
-  <div class="page-home">
-    <svg class="logo" width="116px" height="60px" viewBox="0 0 116 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-      <defs></defs>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-        <g id="上线公告" transform="translate(-240.000000, -28.000000)">
-          <g id="Group-6" transform="translate(240.000000, 28.000000)">
-            <path d="M0,14.5913394 L19.7020183,10.164 L17.7385321,59.8340917 L0,14.5913394 Z M24.2043853,9.31150459 L63.6689725,-5.50458712e-05 L18.3612661,59.8997615 L24.2043853,9.31150459 Z M58.032,43.6297431 L64.7718165,26.8473578 L65.972367,26.8473578 L58.6870459,44.5726789 L57.2954862,44.5726789 L50.0371376,26.8473578 L51.2921835,26.8473578 L57.9775046,43.6297431 L58.032,43.6297431 Z M72.766789,44.572844 L72.766789,26.8469725 L73.9673394,26.8469725 L73.9673394,44.572844 L72.766789,44.572844 Z M80.7618165,27.7908991 L80.7618165,26.8474128 L95.6875046,26.8474128 L95.6875046,27.7908991 L88.8111743,27.7908991 L88.8111743,44.5727339 L87.6106239,44.5727339 L87.6106239,27.7908991 L80.7618165,27.7908991 Z M102.481596,26.8473578 L115.579211,26.8473578 L115.579211,27.7913945 L103.682147,27.7913945 L103.682147,34.8906606 L114.86967,34.8906606 L114.86967,35.8341468 L103.682147,35.8341468 L103.682147,43.6297431 L115.715725,43.6297431 L115.715725,44.5726789 L102.481596,44.5726789 L102.481596,26.8473578 Z" id="Combined-Shape"></path>
-          </g>
-        </g>
-      </g>
-    </svg>
-    <lang-select class="lang-select"></lang-select>
-    <div class="page-content">
-      <div class="left page-bottom">
-        <div class="title">{{ $t('main.title') }}</div>
-        <div class="context">
-          <div class="preview">{{ $t('main.ctx2') }}</div>
-          <div>· {{ $t('main.ctx3') }}</div>
-          <div>· {{ $t('main.ctx4') }}</div>
-        </div>
-        <div class="download-wallet">
-          <span>{{ $t('main.ctx5') }}</span>
-          <div class="version">
-            <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet-0.0.2.dmg" ><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
-            <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet%20Setup%200.0.2.exe"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
-          </div>
-        </div>
-        <div class="explorer">
-          <a href="https://testnet.vite.net" target="_blank" class="extral">{{ $t('main.ctx8') }}<img src="~assets/images/newpage.svg" class="new-page"/></a>
-        </div>
-        <div class="explorer">
-          <a href="mailto:info@vite.org" target="_blank" class="extral">
-          {{ $t('main.ctx9') }} <img src="~assets/images/newpage.svg" class="new-page"/>
+    <div class="page-home">
+        <svg class="logo" width="116px" height="60px" viewBox="0 0 116 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
+                <g id="上线公告" transform="translate(-240.000000, -28.000000)">
+                    <g id="Group-6" transform="translate(240.000000, 28.000000)">
+                        <path d="M0,14.5913394 L19.7020183,10.164 L17.7385321,59.8340917 L0,14.5913394 Z M24.2043853,9.31150459 L63.6689725,-5.50458712e-05 L18.3612661,59.8997615 L24.2043853,9.31150459 Z M58.032,43.6297431 L64.7718165,26.8473578 L65.972367,26.8473578 L58.6870459,44.5726789 L57.2954862,44.5726789 L50.0371376,26.8473578 L51.2921835,26.8473578 L57.9775046,43.6297431 L58.032,43.6297431 Z M72.766789,44.572844 L72.766789,26.8469725 L73.9673394,26.8469725 L73.9673394,44.572844 L72.766789,44.572844 Z M80.7618165,27.7908991 L80.7618165,26.8474128 L95.6875046,26.8474128 L95.6875046,27.7908991 L88.8111743,27.7908991 L88.8111743,44.5727339 L87.6106239,44.5727339 L87.6106239,27.7908991 L80.7618165,27.7908991 Z M102.481596,26.8473578 L115.579211,26.8473578 L115.579211,27.7913945 L103.682147,27.7913945 L103.682147,34.8906606 L114.86967,34.8906606 L114.86967,35.8341468 L103.682147,35.8341468 L103.682147,43.6297431 L115.715725,43.6297431 L115.715725,44.5726789 L102.481596,44.5726789 L102.481596,26.8473578 Z" id="Combined-Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
+        <lang-select class="lang-select"></lang-select>
+        <div class="page-content">
+            <div class="left page-bottom">
+                <div class="title">{{ $t('main.notice.title1') }}</div>
+                <div class="context">
+                    <div class="preview">{{ $t('main.notice.title2') }}</div>
+                    <div class="inner" v-for="(i,j) in $t('main.notice.ctx')" :key="j">· {{ i }}</div>
+                </div>
+                <div class="download">
+                    <span>{{ $t('main.downloadWallet.title') }}</span>
+                    <div class="version">
+                        <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet-0.0.2.dmg">
+                            <div class="version-btn"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx1') }}</span></div>
+                        </a>
+                        <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet%20Setup%200.0.2.exe">
+                            <div class="version-btn ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx2') }}</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="download app">
+                    <span>{{ $t('main.downloadApp.title') }}</span>
+                    <div class="qrcode"></div>
+                </div>
+                <div class="explorer">
+                    <a href="https://testnet.vite.net" target="_blank" class="extral">{{ $t('main.links.ctx1') }}<img src="~assets/images/newpage.svg" class="new-page"/></a>
+                </div>
+                <div class="explorer">
+                    <a href="https://vite.store" target="_blank" class="extral">
+                        {{ $t('main.links.ctx2') }} <img src="~assets/images/newpage.svg" class="new-page"/>
           </a>
+                </div>
+                <div class="explorer">
+                    <a href="https://wallet.vite.net" target="_blank" class="extral">
+                        {{ $t('main.links.ctx3') }} <img src="~assets/images/newpage.svg" class="new-page"/>
+          </a>
+                </div>
+                <div class="explorer">
+                    <a href="mailto:info@vite.org" target="_blank" class="extral">
+                        {{ $t('main.links.ctx4') }} <img src="~assets/images/newpage.svg" class="new-page"/>
+          </a>
+                </div>
+            </div>
+            <div class="right page-bottom">
+                <img src="~assets/images/computer.svg"/>
+      </div>
+            </div>
+
         </div>
-      </div>
-      <div class="right page-bottom">
-        <img src="~assets/images/computer.svg"/>
-      </div>
-    </div>
-    
-  </div>
 </template>
 
 <script>
@@ -56,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss" rel="stylesheet/scss" scoped>
-  @import "~assets/css/vars";
+@import "~assets/css/vars";
 a {
   text-decoration: none;
   cursor: pointer;
@@ -76,7 +93,7 @@ a {
   }
   .logo {
     margin-top: 28px;
-    color: #0A60EC;
+    color: #0a60ec;
   }
   .page-content {
     margin-top: 5%;
@@ -109,16 +126,33 @@ a {
           font-family: Arial, PingFangSC-Semibold;
           padding-bottom: 10px;
         }
+        .inner {
+          font-size: 12px;
+          text-indent: -10px;
+        }
       }
-      .download-wallet {
+      .download {
         margin-top: 30px;
         margin-bottom: 30px;
+        &.app {
+          .qrcode {
+            margin-top:24px;
+            width: 110px;
+            height: 110px;
+            top: -120px;
+            background-image: url(~assets/images/code_app_ios.png);
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #fff;
+          }
+        }
       }
       .version {
         display: flex;
         display: -webkit-flex;
         margin-top: 24px;
-        .wallet-version {
+        .version-btn {
           display: inline-block;
           width: 180px;
           height: 50px;
@@ -157,7 +191,6 @@ a {
   }
 }
 @media (max-width: $MQNarrow) {
-
 }
 
 @media (max-width: $MQMobile) {
@@ -203,7 +236,7 @@ a {
           font-size: 1.2rem;
         }
         .context {
-          color: rgba(255,255,255,0.9);
+          color: rgba(255, 255, 255, 0.9);
           font-size: 0.9rem;
           line-height: 1.5rem;
         }
@@ -232,6 +265,4 @@ a {
     }
   }
 }
-
-
 </style>
