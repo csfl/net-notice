@@ -24,12 +24,12 @@
                         <a href="https://wallet.vite.net">
                             <div class="version-btn"><span class="new-page">{{ $t('main.links.ctx3') }}</span></div>
                         </a>
-                        <!-- <a href="http://pebgdi5g0.bkt.clouddn.com/Vite%20Wallet-0.0.2.dmg">
+                        <a href="http://download.vite.net/Vite.Wallet-0.0.2.dmg">
                             <div class="version-btn ml30"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx1') }}</span></div>
                         </a>
-                        <a href="http://pebgdi5g0.bkt.clouddn.com/Vite%20Wallet%20Setup%200.0.2.exe">
+                        <a href="http://download.vite.net/Vite.Wallet-0.0.2.exe">
                             <div class="version-btn ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx2') }}</span></div>
-                        </a> -->
+                        </a>
                     </div>
                 </div>
                 <div class="download app">
