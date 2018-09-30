@@ -21,12 +21,8 @@
                 <div class="download">
                     <span>{{ $t('main.downloadWallet.title') }}</span>
                     <div class="version">
-                        <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet-0.0.2.dmg">
-                            <div class="version-btn"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx1') }}</span></div>
-                        </a>
-                        <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet%20Setup%200.0.2.exe">
-                            <div class="version-btn ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx2') }}</span></div>
-                        </a>
+                        <a href="http://pebgdi5g0.bkt.clouddn.com/Vite%20Wallet-0.0.2.dmg" ><div class="wallet-version"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.ctx6') }}</span></div></a>
+                        <a href="http://pebgdi5g0.bkt.clouddn.com/Vite%20Wallet%20Setup%200.0.2.exe"><div class="wallet-version ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.ctx7') }}</span></div></a>
                     </div>
                 </div>
                 <div class="download app">
