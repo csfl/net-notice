@@ -21,10 +21,13 @@
                 <div class="download">
                     <span>{{ $t('main.downloadWallet.title') }}</span>
                     <div class="version">
-                        <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet-0.0.2.dmg">
-                            <div class="version-btn"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx1') }}</span></div>
+                        <a href="https://wallet.vite.net">
+                            <div class="version-btn"><span class="new-page">{{ $t('main.links.ctx3') }}</span></div>
                         </a>
-                        <a href="http://7lrzfj.com1.z0.glb.clouddn.com/Vite%20Wallet%20Setup%200.0.2.exe">
+                        <a href="http://download.vite.net/Vite.Wallet-0.0.2.dmg">
+                            <div class="version-btn ml30"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx1') }}</span></div>
+                        </a>
+                        <a href="http://download.vite.net/Vite.Wallet-0.0.2.exe">
                             <div class="version-btn ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx2') }}</span></div>
                         </a>
                     </div>
@@ -39,11 +42,6 @@
                 <div class="explorer">
                     <a href="https://vite.store" target="_blank" class="extral">
                         {{ $t('main.links.ctx2') }} <img src="~assets/images/newpage.svg" class="new-page"/>
-          </a>
-                </div>
-                <div class="explorer">
-                    <a href="https://wallet.vite.net" target="_blank" class="extral">
-                        {{ $t('main.links.ctx3') }} <img src="~assets/images/newpage.svg" class="new-page"/>
           </a>
                 </div>
                 <div class="explorer">
@@ -156,6 +154,11 @@ a {
           display: inline-block;
           width: 180px;
           height: 50px;
+          &.ml30 {
+            .new-page {
+                margin-left: 10px;
+            }
+          }
           background-image: linear-gradient(
             -153deg,
             #1b3bd8 0%,
@@ -176,10 +179,6 @@ a {
       .explorer {
         margin-bottom: 20px;
         max-width: 400px;
-      }
-
-      .new-page {
-        margin-left: 10px;
       }
     }
     .right {
