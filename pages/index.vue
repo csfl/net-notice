@@ -1,6 +1,6 @@
 <template>
     <div class="page-home">
-        <svg class="logo" width="116px" height="60px" viewBox="0 0 116 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <!-- <svg class="logo" width="116px" height="60px" viewBox="0 0 116 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs></defs>
             <g id="Page-1" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
                 <g id="上线公告" transform="translate(-240.000000, -28.000000)">
@@ -9,8 +9,8 @@
                     </g>
                 </g>
             </g>
-        </svg>
-        <lang-select class="lang-select"></lang-select>
+        </svg> -->
+        <!-- <lang-select class="lang-select"></lang-select> -->
         <div class="page-content">
             <div class="left page-bottom">
                 <div class="title">{{ $t('main.notice.title1') }}</div>

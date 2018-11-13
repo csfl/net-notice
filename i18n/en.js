@@ -3,6 +3,9 @@ module.exports = {
     head: {
         title: "Vite-Next Generation High-performance Public Blockchain",
     },
+    nav: {
+        explorer: '浏览器'
+    },
     main:
     {
         notice: {

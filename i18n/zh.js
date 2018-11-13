@@ -3,6 +3,9 @@ module.exports = {
     head: {
         title: "Vite-新一代高性能公链",
     },
+    nav: {
+        explorer: '浏览器'
+    },
     main: {
         notice: {
             title1: "新产品上线公告",
