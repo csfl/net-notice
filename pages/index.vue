@@ -1,53 +1,41 @@
 <template>
     <div class="page-home">
-        <!-- <svg class="logo" width="116px" height="60px" viewBox="0 0 116 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs></defs>
-            <g id="Page-1" stroke="none" stroke-width="1" fill="currentColor" fill-rule="evenodd">
-                <g id="上线公告" transform="translate(-240.000000, -28.000000)">
-                    <g id="Group-6" transform="translate(240.000000, 28.000000)">
-                        <path d="M0,14.5913394 L19.7020183,10.164 L17.7385321,59.8340917 L0,14.5913394 Z M24.2043853,9.31150459 L63.6689725,-5.50458712e-05 L18.3612661,59.8997615 L24.2043853,9.31150459 Z M58.032,43.6297431 L64.7718165,26.8473578 L65.972367,26.8473578 L58.6870459,44.5726789 L57.2954862,44.5726789 L50.0371376,26.8473578 L51.2921835,26.8473578 L57.9775046,43.6297431 L58.032,43.6297431 Z M72.766789,44.572844 L72.766789,26.8469725 L73.9673394,26.8469725 L73.9673394,44.572844 L72.766789,44.572844 Z M80.7618165,27.7908991 L80.7618165,26.8474128 L95.6875046,26.8474128 L95.6875046,27.7908991 L88.8111743,27.7908991 L88.8111743,44.5727339 L87.6106239,44.5727339 L87.6106239,27.7908991 L80.7618165,27.7908991 Z M102.481596,26.8473578 L115.579211,26.8473578 L115.579211,27.7913945 L103.682147,27.7913945 L103.682147,34.8906606 L114.86967,34.8906606 L114.86967,35.8341468 L103.682147,35.8341468 L103.682147,43.6297431 L115.715725,43.6297431 L115.715725,44.5726789 L102.481596,44.5726789 L102.481596,26.8473578 Z" id="Combined-Shape"></path>
-                    </g>
-                </g>
-            </g>
-        </svg> -->
-        <!-- <lang-select class="lang-select"></lang-select> -->
         <div class="page-content">
             <div class="left page-bottom">
                 <div class="title">{{ $t('main.notice.title1') }}</div>
                 <div class="context">
-                    <div class="preview">{{ $t('main.notice.title2') }}</div>
-                    <div class="inner" v-for="(i,j) in $t('main.notice.ctx')" :key="j">· {{ i }}</div>
+                    <div class="preview" v-html="$t('main.notice.title2')"></div>
+                    <div class="inner" v-for="(i,j) in $t('main.notice.ctx')" :key="j"><span class="dot"></span> {{ i }}</div>
+                    <div class="preview" v-html="$t('main.notice.summary')"></div>
+                    <div class="preview annotation">{{ $t('main.notice.annotation') }}</div>
                 </div>
                 <div class="download">
-                    <span>{{ $t('main.downloadWallet.title') }}</span>
+                    <div class="content-title">{{ $t('main.downloadWallet.title') }}</div>
                     <div class="version">
-                        <a href="https://wallet.vite.net">
-                            <div class="version-btn"><span class="new-page">{{ $t('main.links.ctx3') }}</span></div>
-                        </a>
+                        <el-popover
+                          placement="top"
+                          trigger="click">
+                          <div class="ios-container">
+                            <div v-for="(app, index) in apps" :key="index">
+                              <img :src="links.iosApp[app]"  class="ios-app" />
+                              <div>{{$t(`nav.iosApp.childs.${app}`)}}</div>
+                            </div>
+                          </div>
+                          <div class="version-btn btn-ios" slot="reference"><img src="~assets/images/applewhite.svg"/><span class="new-page">iOS</span></div>
+                        </el-popover>
                         <a href="http://download.vite.net/Vite.Wallet-1.0.0.dmg">
-                            <div class="version-btn ml30"><img src="~assets/images/apple.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx1') }}</span></div>
+                            <div class="version-btn ml30"><img src="~assets/images/appleblue.svg"/><span class="new-page">Mac OS</span></div>
                         </a>
                         <a href="http://download.vite.net/Vite.Wallet-1.0.0.exe">
-                            <div class="version-btn ml30"><img src="~assets/images/windows.svg"/><span class="new-page">{{ $t('main.downloadWallet.ctx2') }}</span></div>
+                            <div class="version-btn ml30"><img src="~assets/images/windows.svg"/><span class="new-page">Windows</span></div>
                         </a>
                     </div>
                 </div>
-                <div class="download app">
-                    <span>{{ $t('main.downloadApp.title') }}</span>
-                    <div class="qrcode"></div>
-                </div>
                 <div class="explorer">
-                    <a href="https://testnet.vite.net" target="_blank" class="extral">{{ $t('main.links.ctx1') }}<img src="~assets/images/newpage.svg" class="new-page"/></a>
-                </div>
-                <div class="explorer">
-                    <a href="https://vite.store" target="_blank" class="extral">
-                        {{ $t('main.links.ctx2') }} <img src="~assets/images/newpage.svg" class="new-page"/>
-          </a>
-                </div>
-                <div class="explorer">
+                  <div class="content-title">{{ $t('main.links.title') }}</div>
                     <a href="mailto:info@vite.org" target="_blank" class="extral">
-                        {{ $t('main.links.ctx4') }} <img src="~assets/images/newpage.svg" class="new-page"/>
-          </a>
+                      info@vite.org <img src="~assets/images/newpage.svg" class="new-page"/>
+                    </a>
                 </div>
             </div>
             <div class="right page-bottom">
@@ -65,7 +53,15 @@ export default {
     LangSelect
   },
   data() {
-    return {};
+    return {
+      apps: ['zh', 'en'],
+      links: {
+        iosApp: {
+          en: require('~/assets/images/waiapp.png'),
+          zh: require('~/assets/images/zhongapp.png')
+        }
+      }
+    };
   }
 };
 </script>
@@ -76,6 +72,36 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+.dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background: #007AFF;
+  margin-right: 10px;
+}
+.content-title {
+  font-family: PingFangSC-Semibold;
+  font-size: 16px;
+  color: #272727;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+.ios-container {
+    display: flex;
+    display: -webkit-flex;
+    padding: 20px 20px 20px 0;
+    font-size: 14px;
+    color: #5E6875;
+    letter-spacing: 0;
+    text-align: center;
+    .ios-app {
+      width: 100px;
+      height: 100px;
+      margin-left: 20px;
+    }
+  }
 .ml30 {
   margin-left: 30px;
 }
@@ -88,10 +114,6 @@ a {
     &:hover {
       cursor: pointer;
     }
-  }
-  .logo {
-    margin-top: 28px;
-    color: #0a60ec;
   }
   .page-content {
     margin-top: 5%;
@@ -116,13 +138,15 @@ a {
       }
       .context {
         margin-top: 33px;
-        line-height: 20px;
+        line-height: 22px;
         font-family: PingFangSC-Regular;
-        color: #5e6875;
-        font-size: 16px;
+        color: #272727;
+        font-size: 12px;
         .preview {
-          font-family: Arial, PingFangSC-Semibold;
           padding-bottom: 10px;
+        }
+        .annotation {
+          color: #5E6875;
         }
         .inner {
           font-size: 12px;
@@ -149,31 +173,25 @@ a {
       .version {
         display: flex;
         display: -webkit-flex;
-        margin-top: 24px;
         .version-btn {
-          display: inline-block;
-          width: 180px;
-          height: 50px;
-          &.ml30 {
-            .new-page {
-                margin-left: 10px;
-            }
-          }
-          background-image: linear-gradient(
-            -153deg,
-            #1b3bd8 0%,
-            #176ce0 31%,
-            #0b92e7 49%,
-            #0bb6eb 71%,
-            #00e0f2 100%
-          );
-          box-shadow: 0 0 20px 0 rgba(29, 17, 86, 0.12);
-          border-radius: 100px;
-          font-size: 18px;
-          color: #ffffff;
+          cursor: pointer;
+          width: 140px;
+          height: 46px;
           text-align: center;
-          letter-spacing: 0;
-          line-height: 50px;
+          line-height: 46px;
+          background: #FFFFFF;
+          border: 2px solid #007AFF;
+          border-radius: 2px;
+          color: #007AFF;
+          .new-page {
+            margin-left: 10px;
+          }
+          
+          &.btn-ios {
+            background: #007AFF;
+            color: #ffffff;
+          }
+          
         }
       }
       .explorer {

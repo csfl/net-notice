@@ -4,28 +4,38 @@ module.exports = {
         title: "Vite-新一代高性能公链",
     },
     nav: {
-        explorer: '浏览器'
+        explorer: '浏览器',
+        webWallet: 'Web钱包',
+        desktopWallet: {
+            name: '桌面钱包',
+            childs: {
+                mac: 'Mac OS',
+                win: 'Windows'
+            }
+        },
+        iosApp: {
+            name: 'iOS APP',
+            childs: {
+                zh: '中国用户',
+                en: '外国用户'
+            }
+        },
+        viteStore: 'Vite Store',
+        website: '官网'
     },
     main: {
         notice: {
-            title1: "新产品上线公告",
-            title2: "Vite App iOS版、Vite区块浏览器、Vite Web版钱包、Vite Store及Vite Pay预览版上线。",
-            ctx:["Vite App iOS版当前版本主要实现钱包模块，支持使用助记词创建、恢复账户，支持多币种余额的展示和转入转出，支持通过二维码转账及收款，支持查看交易记录、管理钱包，支持生成新的地址及助记词导出","Vite区块浏览器新增统计信息展示，交易筛选、排序功能，提供持有某种Token的账户图表","Vite Web版钱包支持生成账户，发送及接收交易，获取测试代币，查看目前系统铸造的多种代币","Vite Pay 为Vite Store提供支付及收款功能","Vite Store支持使用VCP(Vite Community Point)支付购买Vite周边产品及话费充值等虚拟商品"]
+            title1: "Vite测试网络-Vite Testnet 1.0.0正式上线",
+            title2: "11月8日，Vite正式上线第一个测试网络版本Vite Testnet 1.0.0。同时，此前发布的区块浏览器，钱包，Vite Store等产品都已切换至Vite Testnet 1.0.0 网络并提供了部分新功能的入口。<br/>测试网络包括如下主要功能模块：",
+            ctx:["DAG 账本结构","内置智能合约","HDPoS分层共识机制","异步通信","快照链", "铸币", "交易配额", "SBP注册和投票"],
+            summary: "目前，Vite系统共有三种代币：VITE，VCP（Vite Community Point），VTT（Vite Test Token）。<br/> 此次上线的Web钱包及桌面版钱包新增运行PoW、抵押获取配额；iOS钱包新增运行PoW、抵押获取配额。区块浏览器新增SBP列表页，支持查看SBP及SBPC相关信息。Vite Pay 接入Vite Testnet 1.0.0后支付速度达到秒级。Vite Store 新增数种虚拟商品。",
+            annotation: '* SBP：快照块生产节点'
         },
         downloadWallet: {
-            title: "Vite钱包",
-            ctx1: "Mac 版",
-            ctx2: "Windows 版"
-        },
-        downloadApp: {
-            title: "扫描下方二维码下载 Vite iOS 钱包",
-            ctx1: "Vite App"
+            title: "下载 Vite App"
         },
         links: {
-            ctx1: "查看区块浏览器",
-            ctx2: "进入Vite Store",
-            ctx3: "Web 版",
-            ctx4: "反馈问题 info@vite.org"
+            title: "问题反馈"
         }
     },
     footer: {

@@ -28,7 +28,6 @@
 <style rel="stylesheet/scss" lang="scss" scoped>
 @import "assets/css/vars.scss";
   .logo {
-    margin-top: 28px;
     color: #0a60ec;
   }
 </style>
