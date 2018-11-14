@@ -5,7 +5,7 @@
         <logo-without-words class="logo"></logo-without-words>
         <div class="nav-content">
           <div class="navbar-menu">
-            <el-menu mode="horizontal" text-color="#272727">
+            <el-menu mode="horizontal" background-color="transparent">
               <el-menu-item :key="index" :index="item" v-for="(item, index) in navs" class="nav-item" >
                 <a :href="links[item]" target="_blank" >
                   {{$t(`nav.${item}`)}}
@@ -13,8 +13,8 @@
               </el-menu-item>
               <el-submenu :index="item.key" v-for="(item, index) in doubleNavs" :key="index" >
                 <template slot="title">{{$t(`nav.${item.key}.name`)}}</template>
-                <el-menu-item :key="index" :index="child" v-for="(child, index) in item.childs" class="sub-nav-item" v-if="item.key !== 'iosApp'">
-                  <a :href="links[item.key][child]" target="_blank">
+                <el-menu-item :key="index" :index="child" v-for="(child, index) in item.childs" v-if="item.key !== 'iosApp'">
+                  <a :href="links[item.key][child]" target="_blank" class="sub-a">
                     {{$t(`nav.${item.key}.childs.${child}`)}}
                   </a>
                 </el-menu-item>
@@ -59,11 +59,11 @@
       return {
         navs: ['explorer', 'webWallet', 'viteStore', 'website'],
         doubleNavs: [{
-          key: 'desktopWallet',
-          childs: ['mac', 'win']
-        },{
           key: 'iosApp',
           childs: ['zh', 'en']
+        },{
+          key: 'desktopWallet',
+          childs: ['mac', 'win']
         }],
         links: {
           explorer: 'https://testnet.vite.net',
@@ -101,6 +101,10 @@
       }
     }
   }
+  .sub-a {
+    width: 100%;
+    display: inline-block;
+  }
   .ios-container {
     display: flex;
     display: -webkit-flex;
@@ -123,55 +127,49 @@
     min-height: calc(100vh - 76px);
   }
   .home-nav {
+    a {
+      text-decoration: none;
+    }
     padding-top: 28px;
     position: relative;
     .home-nav-content {
-      width: 1160px;
+      padding: 0 53px;
       margin: auto;
       position: relative;
     }
     .nav-content {
       position: absolute;
-      left: 140px;
+      left: 185px;
       top: 0px;
       
       .navbar-menu {
         .nav-item {
-          font-size: 16px!important;
-          padding: 0 20px!important;
-          display: block!important;
-          border: none!important;
-          a {
-            background-color: transparent!important;
-            text-decoration: none;
-          }
+          font-size: 16px;
+          padding: 0 20px;
+          display: block;
+          border: none;
         }
         .el-menu--horizontal>.el-submenu .el-submenu__title {
-          font-size: 16px!important;
-        }
-        .el-menu-item.sub-nav-item {
-          background-color: #ffffff!important;
-          padding: 0 20px!important;
-          display: block!important;
-          border: none!important;
+          font-size: 16px;
+          line-height: 62px;
+          color: #272727;
+          border: none;
         }
         .is-active {
-          text-decoration: none!important;
-          border: none!important;
-          color: #272727!important;
+          text-decoration: none;
+          border: none;
+          color: #272727;
         }
-        .el-menu-item {
-          padding: 0px;
-        }
+        
         .el-menu--horizontal {
           border: none;
         }
-        .el-menu--popup {
-          
-        }
-        .el-menu-item:hover {
-          background-color: transparent !important;
-          color: $common-color!important;
+        .el-menu-item {
+          color: #272727;
+          &:hover {
+            color: $common-color;
+            background: none!important;
+          }
         }
         .el-menu--horizontal > .el-menu-item {
           height: 60px;
@@ -181,12 +179,7 @@
     }
     /** iPad **/
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
-      .home-nav-content {
-        box-sizing: border-box;
-        padding-left: 20px;
-        width: 768px;
-        margin: auto;
-      }
+      
       .nav-content {
         display: none;
       }
@@ -197,12 +190,7 @@
     }
     /** iPhone **/
     @media only screen and (min-width: 320px) and (max-width: 767px) {
-      .home-nav-content {
-        box-sizing: border-box;
-        padding-left: 15px;
-        width: 320px;
-        margin: auto;
-      }
+      
       .nav-content {
         display: none;
       }
@@ -211,19 +199,7 @@
         display: block;
         float: right;
       }
-      .search-wrapper {
-        .phone-search {
-          display: block;
-          width: 44px;
-          text-align: center;
-          float: right;
-          line-height: 64px;
-          border-right: 1px solid #E5EDF3;
-        }
-        .invisible-search {
-          display: none;
-        }
-      }
+      
     }
   }
 
