@@ -11,15 +11,15 @@
                   {{$t(`nav.${item}`)}}
                 </a>
               </el-menu-item>
-              <el-submenu :index="item.key" v-for="(item, index) in doubleNavs" :key="index" >
+              <el-submenu :index="item.key" v-for="item in doubleNavs" :key="item.key" >
                 <template slot="title">{{$t(`nav.${item.key}.name`)}}</template>
-                <el-menu-item :key="index" :index="child" v-for="(child, index) in item.childs" v-if="item.key !== 'iosApp'">
+                <el-menu-item :key="child" :index="child" v-for="child in item.childs" v-if="item.key !== 'iosApp'">
                   <a :href="links[item.key][child]" target="_blank" class="sub-a">
                     {{$t(`nav.${item.key}.childs.${child}`)}}
                   </a>
                 </el-menu-item>
                 <div v-if="item.key === 'iosApp'" class="ios-container">
-                  <div v-for="(child, index) in item.childs" :key="index">
+                  <div v-for="child in item.childs" :key="child">
                     <img :src="links[item.key][child]"  class="ios-app" />
                     <div>{{$t(`nav.${item.key}.childs.${child}`)}}</div>
                   </div>
@@ -28,9 +28,16 @@
             </el-menu>
           </div>
         </div>
-       
+        <div class="vertical-menu" @click="openMenu">
+          <div class="v-menu">
+            <img src="~assets/images/menu.svg"/>
+          </div>
+        </div>
         <lang-select class="lang-select"></lang-select>
       </div>
+    </div>
+    <div class="vertail-menu-content">
+      <menu-content :navs="navs" :visible.sync="open" @is-open="closeMenu"></menu-content>
     </div>
     <div class="content-wrapper">
       <nuxt class="content"/>
@@ -43,12 +50,14 @@
   import viteFooter from "~/components/Footer.vue";
   import logoWithoutWords from "~/components/logoWithoutWords.vue";
   import LangSelect from "~/components/LangSelect.vue";
+  import menuContent from "~/components/menuContent.vue";
 
   export default {
     components: {
       logoWithoutWords,
       viteFooter,
-      LangSelect
+      LangSelect,
+      menuContent
     },
     head () {
       return {
@@ -58,6 +67,7 @@
     data() {
       return {
         navs: ['explorer', 'webWallet', 'viteStore', 'website'],
+        open: false,
         doubleNavs: [{
           key: 'iosApp',
           childs: ['zh', 'en']
@@ -80,6 +90,14 @@
           }
         }
       }
+    },
+    methods: {
+      openMenu() {
+        this.open = !this.open;
+      },
+      closeMenu(val) {
+        this.open = val;
+      },
     }
   }
 
@@ -95,7 +113,6 @@
     background-size: cover;
     .lang-select {
       float: right;
-      margin-right: 26px;
       &:hover {
         cursor: pointer;
       }
@@ -117,6 +134,19 @@
       width: 100px;
       height: 100px;
       margin-left: 20px;
+    }
+  }
+  .vertical-menu {
+    display: none;
+    .v-menu {
+      width: 27px;
+      height: 60px;
+      line-height: 68px;
+      text-align: center;
+      box-sizing: border-box;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   .content-wrapper {
