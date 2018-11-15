@@ -2,15 +2,31 @@
   <div :class="classObj">
     <div class="menu-content">
       <div :key="index" v-for="(item, index) in navs" class="menu-item" @click="clickMenu">
-        <nuxt-link :to="localePath(item)" class="nav-item">
+        <a :href="links[item]" target="_blank" class="nav-item">
           {{$t(`nav.${item}`)}}
-        </nuxt-link>
+        </a>
+      </div>
+      <div :key="item.key" v-for="item in doubleNavs" class="menu-item">
+        <span class="nav-item" @click="openChild(item)">{{$t(`nav.${item.key}.name`)}}</span>
+        <div :key="child" :index="child" v-for="child in item.childs" v-if="item.key !== 'iosApp'" class="menu-item child-nav" :class="{'invisible': childInvisible}">
+          <a :href="links[item.key][child]" target="_blank" class="nav-item">
+            {{$t(`nav.${item.key}.childs.${child}`)}}
+          </a>
+        </div>
+        <div v-if="item.key === 'iosApp'"  class="ios-container ios-item" :class="{'invisible': !childInvisible}">
+          <div v-for="child in item.childs" :key="child">
+            <img :src="links[item.key][child]"  class="ios-app" />
+            <div>{{$t(`nav.${item.key}.childs.${child}`)}}</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script type="text/babel">
+import config from '~/config'
+
   export default {
     props: {
       navs: {
@@ -20,11 +36,17 @@
       visible: {
         type: Boolean,
         default: false
+      },
+      doubleNavs: {
+        type: Array,
+        default: () => []
       }
     },
     data() {
       return {
-        open: this.visible
+        open: this.visible,
+        links: config.links,
+        childInvisible: true,
       };
     },
     watch: {
@@ -47,6 +69,9 @@
       clickMenu() {
         this.open = false;
         this.$emit("is-open", this.open);
+      },
+      openChild(item) {
+        this.childInvisible = !this.childInvisible;
       }
     }
   };
@@ -69,12 +94,16 @@
     background: #FFFFFF;
     border: 1px solid #E5EDF3;
     box-shadow: 0 6px 36px 0 rgba(0,62,100,0.04);
-    width: 768px;
     margin: auto;
-    padding-left: 20px;
+    .ios-item {
+      line-height: 20px;
+      padding-left: 10px;
+    }
     .menu-item {
+      background: #FFFFFF;
+      padding-left: 15px;
+      cursor: pointer;
       box-sizing: border-box;
-      height: 57px;
       line-height: 57px;
       border-bottom: 1px solid #E5EDF3;
       .nav-item {
@@ -84,6 +113,9 @@
         color: #3F3F3F;
       }
     }
+    .child-nav {
+      padding-left: 30px;
+    }
   }
 }
 
@@ -91,9 +123,7 @@
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .menu-wrapper {
     .menu-content {
-      width: 320px;
       margin: auto;
-      padding-left: 15px;
     }
   }
 }

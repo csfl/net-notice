@@ -37,7 +37,7 @@
       </div>
     </div>
     <div class="vertail-menu-content">
-      <menu-content :navs="navs" :visible.sync="open" @is-open="closeMenu"></menu-content>
+      <menu-content :navs="navs" :double-navs="doubleNavs" :visible.sync="open" @is-open="closeMenu"></menu-content>
     </div>
     <div class="content-wrapper">
       <nuxt class="content"/>
@@ -51,6 +51,7 @@
   import logoWithoutWords from "~/components/logoWithoutWords.vue";
   import LangSelect from "~/components/LangSelect.vue";
   import menuContent from "~/components/menuContent.vue";
+  import config from '~/config'
 
   export default {
     components: {
@@ -75,20 +76,7 @@
           key: 'desktopWallet',
           childs: ['mac', 'win']
         }],
-        links: {
-          explorer: 'https://testnet.vite.net',
-          webWallet: 'https://wallet.vite.net',
-          viteStore: 'https://vite.store',
-          website: 'https://vite.org',
-          desktopWallet: {
-            mac: 'http://download.vite.net/Vite.Wallet-1.0.0.dmg',
-            win: 'http://download.vite.net/Vite.Wallet-1.0.0.exe'
-          },
-          iosApp: {
-            en: require('~/assets/images/waiapp.png'),
-            zh: require('~/assets/images/zhongapp.png')
-          }
-        }
+        links: config.links
       }
     },
     methods: {
@@ -126,6 +114,7 @@
     display: flex;
     display: -webkit-flex;
     padding: 20px 20px 20px 0;
+    background: #ffffff;
     font-size: 14px;
     color: #5E6875;
     letter-spacing: 0;
