@@ -7,7 +7,7 @@ module.exports = {
         explorer: 'explorer',
         webWallet: 'Web Wallet',
         desktopWallet: {
-            name: '桌面钱包',
+            name: 'Desktop Wallet',
             childs: {
                 mac: 'Mac OS',
                 win: 'Windows'
@@ -16,12 +16,12 @@ module.exports = {
         iosApp: {
             name: 'iOS APP',
             childs: {
-                zh: '中国用户',
-                en: '外国用户'
+                zh: 'Users in China Mainland',
+                en: 'Users outside China Mainland'
             }
         },
         viteStore: 'Vite Store',
-        website: '官网'
+        website: 'Official Website'
     },
     main:
     {
@@ -33,10 +33,10 @@ module.exports = {
             annotation: '* SBP：快照块生产节点'
         },
         downloadWallet: {
-            title: "下载 Vite App"
+            title: "Download Vite App"
         },
         links: {
-            title: "问题反馈"
+            title: "Feedback"
         }
     },
     footer: {
