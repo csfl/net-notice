@@ -16,14 +16,15 @@
                         <no-ssr>
                             <el-popover
                                     placement="top"
-                                    trigger="click">
+                                    v-model="visible"
+                            >
                                 <div class="ios-container">
                                     <div v-for="(app, index) in apps" :key="index">
                                         <img :src="links.iosApp[app]" class="ios-app"/>
                                         <div>{{$t(`nav.iosApp.childs.${app}`)}}</div>
                                     </div>
                                 </div>
-                                <div class="version-btn btn-ios" slot="reference"><img src="~assets/images/applewhite.svg"/><span
+                                <div class="version-btn btn-ios" slot="reference" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
                                         class="new-page">iOS</span></div>
                             </el-popover>
                         </no-ssr>
@@ -69,7 +70,8 @@
                         en: require('~/assets/images/waiapp.png'),
                         zh: require('~/assets/images/zhongapp.png')
                     }
-                }
+                },
+                visible: false
             };
         }
     };
