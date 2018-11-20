@@ -13,18 +13,25 @@
                 <div class="download">
                     <div class="content-title">{{ $t('main.downloadWallet.title') }}</div>
                     <div class="version">
-                        <el-popover
-                                placement="top"
-                                trigger="click">
-                            <div class="ios-container">
-                                <div v-for="(app, index) in apps" :key="index">
-                                    <img :src="links.iosApp[app]" class="ios-app"/>
-                                    <div>{{$t(`nav.iosApp.childs.${app}`)}}</div>
+                        <no-ssr>
+                            <el-popover
+                                    placement="top"
+                                    trigger="click">
+                                <div class="ios-container">
+                                    <div v-for="(app, index) in apps" :key="index">
+                                        <img :src="links.iosApp[app]" class="ios-app"/>
+                                        <div>{{$t(`nav.iosApp.childs.${app}`)}}</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="version-btn btn-ios" slot="reference"><img src="~assets/images/applewhite.svg"/><span
+                                <div class="version-btn btn-ios" slot="reference"><img src="~assets/images/applewhite.svg"/><span
+                                        class="new-page">iOS</span></div>
+                            </el-popover>
+
+                            <div class="version-btn btn-ios" slot="placeholder"><img src="~assets/images/applewhite.svg"/><span
                                     class="new-page">iOS</span></div>
-                        </el-popover>
+                        </no-ssr>
+
+
                         <a href="http://download.vite.net/Vite.Wallet-1.0.0.dmg">
                             <div class="version-btn ml30"><img src="~assets/images/appleblue.svg"/><span
                                     class="new-page">Mac OS</span></div>
