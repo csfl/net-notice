@@ -16,8 +16,8 @@ module.exports = {
         iosApp: {
             name: 'iOS APP',
             childs: {
-                zh: 'Users in China Mainland',
-                en: 'Users outside China Mainland'
+                zh: 'China Mainland',
+                en: 'Outside China Mainland'
             }
         },
         viteStore: 'Vite Store',
@@ -26,11 +26,11 @@ module.exports = {
     main:
     {
         notice: {
-            title1: "Vite测试网络-Vite Testnet 1.0.0正式上线",
-            title2: "11月8日，Vite正式上线第一个测试网络版本Vite Testnet 1.0.0。同时，此前发布的区块浏览器，钱包，Vite Store等产品都已切换至Vite Testnet 1.0.0 网络并提供了部分新功能的入口。<br/>测试网络包括如下主要功能模块：",
-            ctx:["DAG 账本结构","内置智能合约","HDPoS分层共识机制","异步通信","快照链", "铸币", "交易配额", "SBP注册和投票"],
-            summary: "目前，Vite系统共有三种代币：VITE，VCP（Vite Community Point），VTT（Vite Test Token）。<br/> 此次上线的Web钱包及桌面版钱包新增运行PoW、抵押获取配额；iOS钱包新增运行PoW、抵押获取配额。区块浏览器新增SBP列表页，支持查看SBP及SBPC相关信息。Vite Pay 接入Vite Testnet 1.0.0后支付速度达到秒级。Vite Store 新增数种虚拟商品。",
-            annotation: '* SBP：快照块生产节点'
+            title1: "Vite TestNet 1.0.0 is officially launched",
+            title2: "We are proud to announce that Vite TestNet 1.0.0 was officially launched on November 8, 2018. At the same time, a series of Vite products including the block explorer, wallets and  Vite Store are upgraded to  Vite TestNet 1.0.0 synchronously and also partially provide interfaces of new functions. <br/>TestNet mainly contains the following features: ",
+            ctx:["DAG Ledger Structure","Built-in Smart Contract","HDPoS Consensus","Asynchronous Communication ","Snapshot Chain", "Vite Token Issuance", "Trading Quota", "SBP (aka supernode) Registration & Voting"],
+            summary: "So far, the Vite system has 3 types of token in total: VITE, VCP (Vite Community Point), VTT (Vite Test Token).<br/> The new functions of Web wallet 1.2.0 and Desktop wallet 1.2.0 have been released, including PoW, staking for TPS quota, SBP registration & voting. The SBP list, which can support scanning voting result, has been added to block explorer of Vite. The payment will be completed instantly after Vite Pay has access to Vite TestNet 1.0.0. Also, there are more virtual merchandises added to Vite Store.",
+            annotation: '* SBP: Snapshot Block Producer'
         },
         downloadWallet: {
             title: "Download Vite App"
