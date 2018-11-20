@@ -15,7 +15,7 @@
                     <div class="version">
                         <no-ssr>
                             <el-popover
-                                    placement="top"
+                                    placement="bottom"
                                     v-model="visible"
                             >
                                 <div class="ios-container">
@@ -27,6 +27,8 @@
                                 <div class="version-btn btn-ios" slot="reference" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
                                         class="new-page">iOS</span></div>
                             </el-popover>
+                            <div class="version-btn btn-ios" slot="placeholder" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
+                                    class="new-page">iOS</span></div>
                         </no-ssr>
 
 
