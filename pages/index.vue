@@ -13,8 +13,8 @@
                 <div class="download">
                     <div class="content-title">{{ $t('main.downloadWallet.title') }}</div>
                     <div class="version">
-                        <no-ssr>
                             <el-popover
+                                    v-if="ready"
                                     placement="bottom"
                                     v-model="visible"
                             >
@@ -27,9 +27,9 @@
                                 <div class="version-btn btn-ios" slot="reference" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
                                         class="new-page">iOS</span></div>
                             </el-popover>
-                            <div class="version-btn btn-ios" slot="placeholder" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
+
+                            <div v-else class="version-btn btn-ios" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
                                     class="new-page">iOS</span></div>
-                        </no-ssr>
 
 
                         <a href="http://download.vite.net/Vite.Wallet-1.0.0.dmg">
@@ -73,8 +73,14 @@
                         zh: require('~/assets/images/zhongapp.png')
                     }
                 },
-                visible: false
+                visible: false,
+                ready: false
             };
+        },
+        mounted() {
+            setTimeout(() => {
+                this.ready = true
+            }, 500)
         }
     };
 </script>
