@@ -26,9 +26,6 @@
                                 <div class="version-btn btn-ios" slot="reference"><img src="~assets/images/applewhite.svg"/><span
                                         class="new-page">iOS</span></div>
                             </el-popover>
-
-                            <div class="version-btn btn-ios" slot="placeholder"><img src="~assets/images/applewhite.svg"/><span
-                                    class="new-page">iOS</span></div>
                         </no-ssr>
 
 
