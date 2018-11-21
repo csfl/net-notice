@@ -13,18 +13,25 @@
                 <div class="download">
                     <div class="content-title">{{ $t('main.downloadWallet.title') }}</div>
                     <div class="version">
-                        <el-popover
-                                placement="top"
-                                trigger="click">
-                            <div class="ios-container">
-                                <div v-for="(app, index) in apps" :key="index">
-                                    <img :src="links.iosApp[app]" class="ios-app"/>
-                                    <div>{{$t(`nav.iosApp.childs.${app}`)}}</div>
+                            <el-popover
+                                    v-if="ready"
+                                    placement="bottom"
+                                    v-model="visible"
+                            >
+                                <div class="ios-container">
+                                    <div v-for="(app, index) in apps" :key="index">
+                                        <img :src="links.iosApp[app]" class="ios-app"/>
+                                        <div>{{$t(`nav.iosApp.childs.${app}`)}}</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="version-btn btn-ios" slot="reference"><img src="~assets/images/applewhite.svg"/><span
+                                <div class="version-btn btn-ios" slot="reference" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
+                                        class="new-page">iOS</span></div>
+                            </el-popover>
+
+                            <div v-else class="version-btn btn-ios" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
                                     class="new-page">iOS</span></div>
-                        </el-popover>
+
+
                         <a href="http://download.vite.net/Vite.Wallet-1.0.0.dmg">
                             <div class="version-btn ml30"><img src="~assets/images/appleblue.svg"/><span
                                     class="new-page">Mac OS</span></div>
@@ -65,8 +72,15 @@
                         en: require('~/assets/images/waiapp.png'),
                         zh: require('~/assets/images/zhongapp.png')
                     }
-                }
+                },
+                visible: false,
+                ready: false
             };
+        },
+        mounted() {
+            setTimeout(() => {
+                this.ready = true
+            }, 500)
         }
     };
 </script>
