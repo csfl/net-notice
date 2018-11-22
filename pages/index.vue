@@ -32,11 +32,11 @@
                                     class="new-page">iOS</span></div>
 
 
-                        <a href="http://download.vite.net/Vite.Wallet-1.0.0.dmg">
+                        <a href="http://download.vite.net/ViteWallet-1.1.0.dmg">
                             <div class="version-btn ml30"><img src="~assets/images/appleblue.svg"/><span
                                     class="new-page">Mac OS</span></div>
                         </a>
-                        <a href="http://download.vite.net/Vite.Wallet-1.0.0.exe">
+                        <a href="http://download.vite.net/ViteWallet-1.1.0.exe">
                             <div class="version-btn ml30"><img src="~assets/images/windows.svg"/><span class="new-page">Windows</span>
                             </div>
                         </a>
