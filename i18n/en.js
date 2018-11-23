@@ -21,7 +21,7 @@ module.exports = {
             }
         },
         viteStore: 'Vite Store',
-        website: 'Website'
+        website: 'vite.org'
     },
     main:
     {
