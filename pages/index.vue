@@ -2,19 +2,20 @@
   <div class="page-home">
     <div class="page-content">
       <div class="left page-bottom">
-        <div class="title">{{ $t('main.notice.title1') }}</div>
+        <div class="title" v-html="$t('main.notice.title1')"></div>
         <div class="context">
           <div
             class="inner"
             v-for="(i,j) in $t('main.notice.ctx')"
             :key="j"
-          >{{i}}
+            v-html="i"
+          >
           </div>
         </div>
         <div>
           <div class="entries">
-              <div class="btn">我要投票</div>
-              <div class="btn">查询投票奖励</div>
+             <a href="https://wallet.vite.net/" target="__balnk"> <div class="btn">{{$t('action.vote')}}</div></a>
+              <a href="https://reward.vite.net/" target="__balnk"><div class="btn">{{$t('action.queryReward')}}</div></a>
           </div>
         </div>
         <div class="explorer">
@@ -114,6 +115,7 @@
 
     .page-home {
         font-family: Arial, PingFangSC-Semibold;
+        display: flex;
         .lang-select {
             float: right;
             margin-right: 26px;
@@ -143,6 +145,7 @@
                     line-height: 46px;
                 }
                 .context {
+                    text-align: left;
                     margin-top: 33px;
                     line-height: 22px;
                     font-family: PingFangSC-Regular;
@@ -156,7 +159,7 @@
                     }
                     .inner {
                         margin:8px 0;
-                        margin-left: 5px;
+                        margin-left: 10px;
                         text-indent: 0;
                         font-size: 12px;
                         text-indent: -10px;
@@ -210,6 +213,7 @@
                 margin-right: 0;
             }
             .page-content {
+                width: 100%;
                 display: flex;
                 flex-direction: column-reverse;
                 overflow: hidden;
@@ -223,6 +227,9 @@
                     text-align: center;
                     &.page-bottom {
                         margin-bottom: 0;
+                    }
+                    & >img{
+                        width:100%;
                     }
                     & > svg {
                         width: 300px;

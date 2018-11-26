@@ -23,6 +23,10 @@ module.exports = {
         viteStore: 'Vite Store',
         website: 'vite.org'
     },
+    action: {
+        'vote': "我要投票",
+        'queryReward': "查询投票奖励"
+    },
     main:
     {
         notice: {

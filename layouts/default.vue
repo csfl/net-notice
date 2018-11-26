@@ -109,7 +109,6 @@
         height: 100%;
         background: url("~assets/images/background.svg");
         background-position: 100% 0;
-        background-size:100% 95%;
         background-repeat: no-repeat;
         .lang-select {
             float: right;
@@ -228,7 +227,9 @@
         }
         /** iPhone **/
         @media only screen and (min-width: 320px) and (max-width: 767px) {
-
+            .default-container {
+                background-size:auto 100%;
+            }
             .nav-content {
                 display: none;
             }
@@ -242,6 +243,9 @@
     }
 
     @media (max-width: $MQMobile) {
+            .default-container {
+                background-size:auto 100%;
+            }
         .content-wrapper {
             padding: 0 1.5rem;
         }
