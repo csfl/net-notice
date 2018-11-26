@@ -107,8 +107,10 @@
     .default-container {
         width: 100%;
         height: 100%;
-        background: url("~assets/images/background.svg") 100% 0%;
-        background-size: cover;
+        background: url("~assets/images/background.svg");
+        background-position: 100% 0;
+        background-size:100% 95%;
+        background-repeat: no-repeat;
         .lang-select {
             float: right;
             &:hover {
@@ -157,7 +159,9 @@
         padding: 0 53px;
         margin: auto;
         height: 100%;
-        min-height: calc(100vh - 76px);
+        width:100%;
+        display: flex;
+        min-height: calc(100vh - 165px);
     }
 
     .home-nav {

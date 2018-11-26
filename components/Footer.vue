@@ -1,33 +1,58 @@
 <template>
   <footer class="footer">
     <div class="footer-content">
-      <div class="offical-website">
-        <a href="https://www.vite.org/">Vite {{$t('footer.official')}}</a>
-      </div>
+      <div class="brand">©2018 Vite Labs</div>
       <div class="outer-link">
-        <a class="img-wrapper" href="https://github.com/vitelabs" target="_blank">
-          <img src="~assets/images/github.svg"/>
+        <a
+          class="img-wrapper"
+          href="https://github.com/vitelabs"
+          target="_blank"
+        >
+          <img src="~assets/images/github.svg" />
         </a>
-        <a class="img-wrapper" href="https://discordapp.com/invite/CsVY76q" target="_blank">
-          <img src="~assets/images/dicord.svg"/>
+        <a
+          class="img-wrapper"
+          href="https://discordapp.com/invite/CsVY76q"
+          target="_blank"
+        >
+          <img src="~assets/images/dicord.svg" />
         </a>
-        <a class="img-wrapper" href="https://twitter.com/vitelabs" target="_blank">
-          <img src="~assets/images/twitter.svg"/>
+        <a
+          class="img-wrapper"
+          href="https://twitter.com/vitelabs"
+          target="_blank"
+        >
+          <img src="~assets/images/twitter.svg" />
         </a>
-        <a class="img-wrapper" :href="tMe" target="_blank">
-          <img src="~assets/images/telegram.svg"/>
+        <a
+          class="img-wrapper"
+          :href="tMe"
+          target="_blank"
+        >
+          <img src="~assets/images/telegram.svg" />
         </a>
-        <a class="img-wrapper" href="https://www.reddit.com/r/vitelabs" target="_blank">
-          <img src="~assets/images/reddit.svg"/>
+        <a
+          class="img-wrapper"
+          href="https://www.reddit.com/r/vitelabs"
+          target="_blank"
+        >
+          <img src="~assets/images/reddit.svg" />
         </a>
         <el-popover
           placement="top"
-          trigger="click">
-          <img src="~assets/images/wxCode.png" width="150" height="150"/>
-          <img slot="reference" src="~assets/images/wecht.svg"/>
+          trigger="click"
+        >
+          <img
+            src="~assets/images/wxCode.png"
+            width="150"
+            height="150"
+          />
+          <img
+            slot="reference"
+            src="~assets/images/wecht.svg"
+          />
         </el-popover>
       </div>
-      <div class="brand">©2018 Vite Labs</div>
     </div>
   </footer>
 </template>
@@ -60,7 +85,7 @@
     font-size: 14px;
     color: #fff;
     .footer-content {
-      padding: 0 53px;
+      padding: 0 240px;
       box-sizing: border-box;
       margin: auto;
       height: 76px;

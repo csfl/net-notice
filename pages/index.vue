@@ -1,60 +1,42 @@
 <template>
-    <div class="page-home">
-        <div class="page-content">
-            <div class="left page-bottom">
-                <div class="title">{{ $t('main.notice.title1') }}</div>
-                <div class="context">
-                    <div class="preview" v-html="$t('main.notice.title2')"></div>
-                    <div class="inner" v-for="(i,j) in $t('main.notice.ctx')" :key="j"><span class="dot"></span> {{ i }}
-                    </div>
-                    <div class="preview" v-html="$t('main.notice.summary')"></div>
-                    <div class="preview annotation">{{ $t('main.notice.annotation') }}</div>
-                </div>
-                <div class="download">
-                    <div class="content-title">{{ $t('main.downloadWallet.title') }}</div>
-                    <div class="version">
-                            <el-popover
-                                    v-if="ready"
-                                    placement="bottom"
-                                    v-model="visible"
-                            >
-                                <div class="ios-container">
-                                    <div v-for="(app, index) in apps" :key="index">
-                                        <img :src="links.iosApp[app]" class="ios-app"/>
-                                        <div>{{$t(`nav.iosApp.childs.${app}`)}}</div>
-                                    </div>
-                                </div>
-                                <div class="version-btn btn-ios" slot="reference" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
-                                        class="new-page">iOS</span></div>
-                            </el-popover>
-
-                            <div v-else class="version-btn btn-ios" @click="visible = !visible"><img src="~assets/images/applewhite.svg"/><span
-                                    class="new-page">iOS</span></div>
-
-
-                        <a href="http://download.vite.net/ViteWallet-1.1.0.dmg">
-                            <div class="version-btn ml30"><img src="~assets/images/appleblue.svg"/><span
-                                    class="new-page">Mac OS</span></div>
-                        </a>
-                        <a href="http://download.vite.net/ViteWallet-1.1.0.exe">
-                            <div class="version-btn ml30"><img src="~assets/images/windows.svg"/><span class="new-page">Windows</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="explorer">
-                    <div class="content-title">{{ $t('main.links.title') }}</div>
-                    <a href="mailto:info@vite.org" target="_blank" class="extral">
-                        info@vite.org <img src="~assets/images/newpage.svg" class="new-page"/>
-                    </a>
-                </div>
-            </div>
-            <div class="right page-bottom">
-                <img src="~assets/images/computer.svg"/>
-            </div>
+  <div class="page-home">
+    <div class="page-content">
+      <div class="left page-bottom">
+        <div class="title">{{ $t('main.notice.title1') }}</div>
+        <div class="context">
+          <div
+            class="inner"
+            v-for="(i,j) in $t('main.notice.ctx')"
+            :key="j"
+          >{{i}}
+          </div>
         </div>
-
+        <div>
+          <div class="entries">
+              <div class="btn">我要投票</div>
+              <div class="btn">查询投票奖励</div>
+          </div>
+        </div>
+        <div class="explorer">
+          <div class="content-title">{{ $t('main.links.title') }}</div>
+          <a
+            href="mailto:info@vite.org"
+            target="_blank"
+            class="extral"
+          >
+            info@vite.org <img
+              src="~assets/images/newpage.svg"
+              class="new-page"
+            />
+          </a>
+        </div>
+      </div>
+      <div class="right page-bottom">
+        <img src="~assets/images/reward.svg" />
+      </div>
     </div>
+
+  </div>
 </template>
 
 <script>
@@ -149,13 +131,12 @@
             letter-spacing: 0;
             line-height: 18px;
             .extral {
-                color: #053cce;
+                color:#007AFF;;
             }
             .page-bottom {
-                margin-bottom: 76px;
+                width:50%;
             }
             .left {
-                width: 50%;
                 .title {
                     font-size: 40px;
                     letter-spacing: 0.5px;
@@ -174,61 +155,39 @@
                         color: #5E6875;
                     }
                     .inner {
-                        margin-left: 10px;
+                        margin:8px 0;
+                        margin-left: 5px;
+                        text-indent: 0;
                         font-size: 12px;
                         text-indent: -10px;
                     }
                 }
-                .download {
-                    margin-top: 30px;
-                    margin-bottom: 30px;
-                    &.app {
-                        .qrcode {
-                            margin-top: 24px;
-                            width: 110px;
-                            height: 110px;
-                            top: -120px;
-                            background-image: url(~assets/images/code_app_ios.png);
-                            background-size: 100px;
-                            background-repeat: no-repeat;
-                            background-position: center;
-                            background-color: #fff;
-                        }
-                    }
-                }
-                .version {
-                    display: flex;
-                    display: -webkit-flex;
-                    .version-btn {
-                        cursor: pointer;
-                        width: 140px;
-                        height: 46px;
+                .entries{
+                    display:flex;
+                    margin-top:20px;
+                    .btn{
+                        color:#fff;
                         text-align: center;
                         line-height: 46px;
-                        background: #FFFFFF;
-                        border: 2px solid #007AFF;
+                        background: #007AFF;
                         border-radius: 2px;
-                        color: #007AFF;
-                        .new-page {
-                            margin-left: 10px;
-                        }
-
-                        &.btn-ios {
-                            background: #007AFF;
-                            color: #ffffff;
-                        }
-
+                        width:160px;
+                        height:46px;
+                        margin-right: 19px;
+                        cursor: pointer;
                     }
-                }
+                        }
                 .explorer {
+                    margin-top:40px;
                     margin-bottom: 20px;
                     max-width: 400px;
                 }
             }
             .right {
-                width: 50%;
+                align-self: flex-end;
+                margin-bottom: 112px;
                 & > img {
-                    width: 100%;
+                    
                 }
             }
         }

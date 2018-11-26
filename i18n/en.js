@@ -26,11 +26,12 @@ module.exports = {
     main:
     {
         notice: {
-            title1: "Vite TestNet 1.0.0 is officially launched",
-            title2: "We are proud to announce that Vite TestNet 1.0.0 was officially launched on November 8, 2018. At the same time, a series of Vite products including the block explorer, wallets and  Vite Store are upgraded to  Vite TestNet 1.0.0 synchronously and also partially provide interfaces of new functions. <br/>TestNet mainly contains the following features: ",
-            ctx:["DAG Ledger Structure","Built-in Smart Contract","HDPoS Consensus","Asynchronous Communication ","Snapshot Chain", "Token Issuance", "Trading Quota", "SBP (aka Supernode) Registration & Voting"],
-            summary: "So far, the Vite system has 3 types of token in total: VITE, VCP (Vite Community Point), VTT (Vite Test Token).<br/> The new functions of Web wallet 1.1.0 have been released, including running PoW, staking for TPS quota, SBP registration & voting. The SBP list, which can support scanning voting result, has been added to block explorer of Vite. The payment will be completed instantly after Vite Pay has access to Vite TestNet 1.0.0. In addition, we have new stocks being available at Vite Store. Come to check it out. ",
-            annotation: '* SBP: Snapshot Block Producer'
+            title1: "投票超级节点，每天瓜分 8000+ VITE",
+            ctx: ["Vite测试网络激励计算在11月23日13:00正式开启。",
+                "测试网络中Vite基金会负责至少5个超级节点以保障系统的稳定性，官方超级节点获得的全部奖励会回馈给社区用户。",
+                "官方超级节点为：Vite_SBP01、Vite_SBP02、Vite_SBP03、Vite_SBP04、Vite_SBP05",
+                "这5个官方超级节点获得的奖励将作为一个整体，其中的70%将作为投票奖励回馈给投票用户，用户投票给这5个超级节点中的任意一个，都可以瓜分奖励；另外30%将回馈给全节点。",
+                "5个官方超级节点预计每天会产生8000+ VITE作为投票奖励；越早加入投票，瓜分奖励越多！"],
         },
         downloadWallet: {
             title: "Download Vite Apps"

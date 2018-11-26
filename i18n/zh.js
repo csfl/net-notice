@@ -25,14 +25,12 @@ module.exports = {
     },
     main: {
         notice: {
-            title1: "Vite测试网络-Vite TestNet 1.0.0正式上线",
-            title2: "11月8日，Vite正式上线第一个测试网络版本Vite TestNet 1.0.0。同时，此前发布的区块浏览器，钱包，Vite Store等产品都已切换至Vite TestNet 1.0.0 网络并提供了部分新功能的入口。<br/>测试网络包括如下主要功能模块：",
-            ctx:["DAG 账本结构","内置智能合约","HDPoS分层共识机制","异步通信 ","快照链", "铸币", "交易配额", "SBP注册和投票"],
-            summary: "目前，Vite系统共有三种代币：VITE，VCP（Vite Community Point），VTT（Vite Test Token）。<br/> Web钱包1.1.0新增运行PoW、抵押获取配额及注册SBP和投票功能；iOS钱包新增PoW、抵押获取配额及投票功能。区块浏览器新增SBP列表页，支持查看投票情况。Vite Pay 接入Vite TestNet 1.0.0后支付速度达到秒级。Vite Store 新增数种虚拟商品。",
-            annotation: '* SBP：快照块生产节点'
-        },
-        downloadWallet: {
-            title: "下载 Vite App"
+            title1: "投票超级节点，每天瓜分 8000+ VITE",
+            ctx: ["Vite测试网络激励计算在11月23日13:00正式开启。",
+                "测试网络中Vite基金会负责至少5个超级节点以保障系统的稳定性，官方超级节点获得的全部奖励会回馈给社区用户。",
+                "官方超级节点为：Vite_SBP01、Vite_SBP02、Vite_SBP03、Vite_SBP04、Vite_SBP05",
+                "这5个官方超级节点获得的奖励将作为一个整体，其中的70%将作为投票奖励回馈给投票用户，用户投票给这5个超级节点中的任意一个，都可以瓜分奖励；另外30%将回馈给全节点。",
+                "5个官方超级节点预计每天会产生8000+ VITE作为投票奖励；越早加入投票，瓜分奖励越多！"],
         },
         links: {
             title: "问题反馈"
