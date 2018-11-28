@@ -162,7 +162,6 @@
                         margin-left: 10px;
                         text-indent: 0;
                         font-size: 12px;
-                        text-indent: -10px;
                     }
                 }
                 .entries{
