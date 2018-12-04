@@ -167,15 +167,74 @@ a {
         .preview {
           padding: 10px 0;
         }
-        .annotation {
-          color: #5e6875;
-        }
-        .inner {
-          margin: 8px 0;
-          margin-left: 10px;
-          text-indent: 0;
-          font-size: 12px;
-          text-indent: -10px;
+        .page-content {
+            margin-top: 5%;
+            display: flex;
+            display: -webkit-flex;
+            color: #272727;
+            font-size: 18px;
+            letter-spacing: 0;
+            line-height: 18px;
+            .extral {
+                color:#007AFF;;
+            }
+            .page-bottom {
+                width:50%;
+            }
+            .left {
+                .title {
+                    font-size: 40px;
+                    letter-spacing: 0.5px;
+                    line-height: 46px;
+                }
+                .context {
+                    text-align: left;
+                    margin-top: 33px;
+                    line-height: 22px;
+                    font-family: PingFangSC-Regular;
+                    color: #272727;
+                    font-size: 12px;
+                    .preview {
+                        padding: 10px 0;
+                    }
+                    .annotation {
+                        color: #5E6875;
+                    }
+                    .inner {
+                        margin:8px 0;
+                        margin-left: 10px;
+                        text-indent: 0;
+                        font-size: 12px;
+                    }
+                }
+                .entries{
+                    display:flex;
+                    margin-top:20px;
+                    .btn{
+                        color:#fff;
+                        text-align: center;
+                        line-height: 46px;
+                        background: #007AFF;
+                        border-radius: 2px;
+                        width:160px;
+                        height:46px;
+                        margin-right: 19px;
+                        cursor: pointer;
+                    }
+                        }
+                .explorer {
+                    margin-top:40px;
+                    margin-bottom: 20px;
+                    max-width: 400px;
+                }
+            }
+            .right {
+                align-self: flex-end;
+                margin-bottom: 112px;
+                & > img {
+                    
+                }
+            }
         }
       }
       .entries {
